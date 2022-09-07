@@ -20,7 +20,6 @@ const lookbookRts = require('./routes/lookbookRoutes');
 const inspoRts = require('./routes/inspoRoutes');
 const userRts = require('./routes/userRoutes');
 const authRts= require('./routes/authRoutes');
-const { route } = require("./routes/closetRoutes");
 
 
 //middleware
