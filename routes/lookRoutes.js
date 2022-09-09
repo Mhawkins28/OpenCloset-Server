@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const lookbookCtrl = require("../controllers/lookbookCtrl");
+const lookCtrl = require("../controllers/lookCtrl");
  
 
 // **LOOKBOOK PAGE**

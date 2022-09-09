@@ -1,17 +1,19 @@
 const mongoose = require("mongoose");
-const { Schema } = mongoose;
+const Schema = mongoose.Schema;
 
-
-const UserSchema = new mongoose.Schema({
-    name: String,
-    email: String,
-    username: String,
-    password: String,
-    //will add passport options later 
+const UserSchema = new Schema({
+  name: {
+    type: String,
+    required: true
+  },
+  username: {
+    type: String,
+    required: true,
+  },
+  password: {
+    type: String,
+    required: true,
+  },
 })
 
-//will add bcrypt and salt rounds 
-
-const User = mongoose.model("User", UserSchema);
-
-module.exports = User;
+module.exports = User = mongoose.model('User',UserSchema);

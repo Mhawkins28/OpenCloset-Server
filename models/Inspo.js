@@ -1,15 +1,11 @@
 const mongoose = require("mongoose");
-const { Schema } = mongoose;
+const Schema = mongoose.Schema;
 
-const InspoSchema = mongoose.Schema({
+const InspoSchema = new Schema({
   photo: String,
+  title: String,
   notes: String,
-  Owner: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "User",
-  },
 });
 
-const Inspo = mongoose.model("Inspo", InspoSchema);
 
-module.exports = Inspo;
+module.exports = Inspo = mongoose.model('Inspo',InspoSchema);

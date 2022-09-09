@@ -14,9 +14,8 @@ require('dotenv').config()
 require('./db/connection');
 
 //routes import
-
-const closetRts = require('./routes/closetRoutes');
-const lookbookRts = require('./routes/lookbookRoutes');
+const itemRts = require('./routes/itemRoutes');
+const lookRts = require('./routes/lookRoutes');
 const inspoRts = require('./routes/inspoRoutes');
 const userRts = require('./routes/userRoutes');
 const authRts= require('./routes/authRoutes');
@@ -37,9 +36,8 @@ app.use(
 );
 
 //routes use
-
-app.use('/closet', closetRts)
-app.use('/lookbook', lookbookRts)
+app.use('/items', itemRts)
+app.use('/looks', lookRts)
 app.use('/inspo', inspoRts)
 app.use('/user', userRts)
 app.use ('/', authRts)

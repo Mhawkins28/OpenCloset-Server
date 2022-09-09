@@ -1,10 +1,14 @@
 const mongoose = require("mongoose");
 
+
+//**BEFORE DEPLOYMENT FIX THE URL SO THAT IT ONLY SHOWS IN ENV//DELETE BEFORE COMMIT TO MAINTAIN SECURITY
+
 mongoose 
-.connect(process.env.DATABASE_URL, {
+.connect /*URL HERE*/, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
+
   .then((instance) => {
     console.log(`connected on ${instance.connections[0].name}`);
   })
