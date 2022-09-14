@@ -1,13 +1,11 @@
 const express = require("express");
 const app = express();
-const normalizePort = require('normalize-port')
+const normalizePort = require('normalize-port');
 const PORT = normalizePort(process.env.PORT || '3001');
-const mongoose = require("mongoose");
 const morgan = require("morgan");
 const cors = require("cors");
 const session = require("express-session");
 const cookieSession = require("cookie-session");
-let path = require("path");
 
 //db
 require('dotenv').config()
@@ -17,7 +15,6 @@ require('./db/connection');
 const itemRts = require('./routes/itemRoutes');
 const lookRts = require('./routes/lookRoutes');
 const inspoRts = require('./routes/inspoRoutes');
-const userRts = require('./routes/userRoutes');
 const authRts= require('./routes/authRoutes');
 
 
@@ -39,8 +36,7 @@ app.use(
 app.use('/items', itemRts)
 app.use('/looks', lookRts)
 app.use('/inspo', inspoRts)
-app.use('/user', userRts)
-app.use ('/', authRts)
+app.use ('/user', authRts)
 
 app.get("/", (req, res) => {
     res.json("Project 4 is up. letssss gooooo");

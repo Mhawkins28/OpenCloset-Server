@@ -1,13 +1,11 @@
 const router = require("express").Router();
 const lookCtrl = require("../controllers/lookCtrl");
- 
 
-// **LOOKBOOK PAGE**
-// get lookbook -- has catagories and add new catagory 
-// get catagory -- has looks and add new looks
-// post new -- form for new look contains a way to add items from the closet and also an image edit/upload
-// put edit look -- edit and change photo
-//delete look
+
+router.get('/', lookCtrl.lookIndex);
+router.post('/', lookCtrl.postLook);
+router.put('/:id', lookCtrl.updateLook);
+router.delete('/:id', lookCtrl.deleteLook);
 
 module.exports = router;
 

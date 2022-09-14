@@ -8,13 +8,13 @@ const Inspo = require('../models/Inspo');
 const items = [
   {
     name: 'Thrfted Flannel',
-    catagory: 'Tops',
+    category: 'Tops',
     photo:'https://cdn.shopify.com/s/files/1/0556/1841/products/Scar_Mens_18.08.22347_670x.jpg?v=1662461123',
     notes: "great find. I will probably wear it a lot this fall"
   },
   {
     name: 'Zara Blazer',
-    catagory: 'Outerwear',
+    category: 'Outerwear',
     photo:'https://static.zara.net/photos///2021/I/0/1/p/8215/760/800/2/w/563/8215760800_6_1_1.jpg?ts=1627025028118',
     notes: "",
   },
@@ -22,13 +22,13 @@ const items = [
 
 const looks = [
   {
-    catagory: "Work",
+    category: "Work",
     items: [],
     notes: "test outfit 1",
     lookName: 'Test 1' 
   },
   {
-    catagory: "Night",
+    category: "Night",
     items: [],
     notes: "test outfit 2",
     lookName: 'Test 2' 

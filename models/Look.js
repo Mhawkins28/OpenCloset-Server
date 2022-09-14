@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const LookSchema = new Schema({
-  catagory: String,
+  category: String,
   items: [{
       type: mongoose.Schema.Types.ObjectId,
       ref: "Item",
