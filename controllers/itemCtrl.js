@@ -22,6 +22,16 @@ const postItem = async (req, res) => {
   });
 };
 
+const getOneItem = (req, res) => {
+  Item.findById(req.params.id, (err, item) =>{
+    if(err){
+        res.status(400).json(err)
+        return
+    }
+    res.json(item)
+})
+}
+
 const updateItem = (req, res) => {
   Item.findByIdAndUpdate(req.params.id, req.body, (err, item) => {
     if (err) {
@@ -35,21 +45,23 @@ const updateItem = (req, res) => {
 };
 
 const deleteItem = (req, res) => {
-  let { id } = req.params;
+  let { id } =  req.params
+  console.log(id)
 
-  Pin.findByIdAndDelete(id, (err, deletedItem) => {
-    if (err) {
-      res.status(400).json(err);
-      return;
-    }
-    res.json(deletedItem);
-  });
+  Item.findByIdAndDelete(id, (err, deletedItem) =>{
+        if(err){
+            res.status(400).json(err)
+            return
+        }
 
-};
+        res.json(deletedItem)
+  })
+}
 
 
 module.exports = {
   itemIndex,
+  getOneItem,
   postItem,
   updateItem,
   deleteItem,

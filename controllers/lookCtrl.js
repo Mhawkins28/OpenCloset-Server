@@ -22,6 +22,17 @@ const postLook= async (req, res) => {
   });
 };
 
+const getOneLook = (req, res) => {
+  Look.findById(req.params.id, (err, look) =>{
+      if(err){
+          res.status(400).json(err)
+          return
+      }
+
+      res.json(look)
+  })
+}
+
 const updateLook = (req, res) => {
   Look.findByIdAndUpdate(req.params.id, req.body, (err, look) => {
     if (err) {
@@ -46,10 +57,10 @@ const deleteLook = (req, res) => {
   });
 }
 
-
 module.exports = {
   lookIndex,
   postLook,
   updateLook,
+  getOneLook,
   deleteLook,
 }
