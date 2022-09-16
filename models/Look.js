@@ -3,10 +3,7 @@ const Schema = mongoose.Schema;
 
 const LookSchema = new Schema({
   category: String,
-  items: [{
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Item",
-  }],
+  items: [String],
   notes: String,
   lookName: String,
 });
