@@ -5,7 +5,7 @@ const PORT = normalizePort(process.env.PORT || '3001');
 const morgan = require("morgan");
 const cors = require("cors");
 const session = require("express-session");
-const cookieSession = require("cookie-session");
+const bodyParser = require('body-parser')
 
 //db
 require('dotenv').config()
@@ -16,31 +16,22 @@ const itemRts = require('./routes/itemRoutes');
 const lookRts = require('./routes/lookRoutes');
 const inspoRts = require('./routes/inspoRoutes');
 const authRts= require('./routes/authRoutes');
+const userRts= require('./routes/userRoutes')
 
 
 //middleware
 app.use(morgan("tiny"));
 app.use(cors());
-app.use(express.json({limit: '50mb'}));
-app.use(express.urlencoded({ extended: true, limit: '50mb' }));
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
 
-app.use(
-  session({
-    secret: "MCLOS1!",
-    resave: false,
-    saveUninitialized: true,
-  })
-);
 
 //routes use
 app.use('/items', itemRts)
 app.use('/looks', lookRts)
 app.use('/inspo', inspoRts)
-app.use ('/user', authRts)
-
-app.get("/", (req, res) => {
-    res.json("Project 4 is up. letssss gooooo");
-  });
+app.use ('/', authRts)
+app.use ('/', userRts)
 
 app.listen(PORT, () => {
   console.log(`Server is running on port: ${PORT}`);

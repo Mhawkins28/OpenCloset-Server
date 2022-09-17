@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const inspoCtrl = require("../controllers/inspoCtrl");
+// const inspoCtrl = require("../controllers/inspoCtrl");
 
 // **Inspo PAGE**
 // get inspoPage 

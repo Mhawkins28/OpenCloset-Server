@@ -5,7 +5,11 @@ const LookSchema = new Schema({
   category: String,
   items: [String],
   notes: String,
-  lookName: String,
+  name: String,
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
+  },
 });
 
 module.exports = Look = mongoose.model('Look',LookSchema);

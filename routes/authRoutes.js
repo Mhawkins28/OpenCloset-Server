@@ -9,7 +9,7 @@ router.get('/login/success', (req, res) => {
   if(req.user) {
     res.status(200).json({
       success:true,
-      message: "successfull",
+      message: "successful",
       user:req.user,
       // cookie: req.cookies
       // jwt
@@ -27,17 +27,13 @@ router.get('/login/failed', (req, res) => {
 
 router.get('/logout', (req, res) => {
   req.logout();
-  res.redirect('http://localhost:3000/')
+  res.redirect('http://localhost:3001/')
 })
 
-//   router.get('/google/callback', passport.authenticate('google',{
-//     successRedirect: 'http://localhost:3000/',
-//     failureRedirect: '/login/failed'
-//   }))
-  
+
 router.get('/logout', function(req, res){
   req.logout(()=> {
-    res.redirect('/user/login');
+    res.redirect('user/login');
   });
 });
 

@@ -1,5 +1,6 @@
 require("./connection");
 require('dotenv').config();
+const bcrypt = require('bcrypt');
 const User = require("../models/User");
 const Item = require('../models/Item');
 const Look = require('../models/Look');
@@ -25,13 +26,13 @@ const looks = [
     category: "Work",
     items: [],
     notes: "test outfit 1",
-    lookName: 'Test 1' 
+    name: 'Test 1' 
   },
   {
     category: "Night",
     items: [],
     notes: "test outfit 2",
-    lookName: 'Test 2' 
+    name: 'Test 2' 
   },
 ]
 
@@ -48,43 +49,30 @@ const inspos = [
   },
 ]
 
-const users = [
-  { name: 'Meg', 
-    username: 'MegTest', 
-    password: 'test22'
-  },
-]
-
-User.deleteMany({})
-.then(()=>{
-    User.insertMany(users)
-})
+  User.deleteMany({})
+  .then(()=>{
+    User.insertMany([{ name: 'Megan', username: 'MTest', password: "123"}])
+  })
 .then(() => {
   Item.deleteMany({})
   .then( () => {
       return Item.insertMany(items)
   })
-  // .then((insertedItems)=>{
-  //     console.log(insertedItems)
-  // })
-
+})
 .then(() => {
   Look.deleteMany({})
     .then( () => {
       return Look.insertMany(looks)
   })
-  // .then((insertedLooks)=>{
-  //     console.log(insertedLooks)
-  // })
+})
 .then(() => {
   Inspo.deleteMany({})
     .then( () => {
       return Inspo.insertMany(inspos)
   })
-})
   .catch(err => console.error(err))
   .finally(()=>{
       process.exit()
     })
   })
-})
+
