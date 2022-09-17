@@ -19,20 +19,39 @@ const items = [
     photo:'https://static.zara.net/photos///2021/I/0/1/p/8215/760/800/2/w/563/8215760800_6_1_1.jpg?ts=1627025028118',
     notes: "",
   },
+  {
+    name: 'Everlane Linen Pant',
+    category: 'Bottoms',
+    photo:'https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRPnRnod8WH3NmJMhmZMC_OjQ-1fq36Wqr7lIFmGRF4YtcOUrG5-cD9PP2WaeKvw_05FX0HGgOY2LzL3QXgEW-2s6fLz4vSEltnrx--VuzcBB7LTBrRclLLzg&usqp=CAc',
+    notes: "so comfy! and cute!",
+  },
+  {
+    name: 'Adidas Classic',
+    category: 'Shoes',
+    photo:'https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSAbpsrn52ZhKBI4ffMHZUhNBYbmcyv1G3VkmpD_yh_H8_4a6jKRuxSr2OzhIP6zEeSTSDGdGi1&usqp=CAc',
+    notes: "my go-tos",
+  },
+  
 ]
 
 const looks = [
   {
     category: "Work",
-    items: [],
+    items: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQYVglYnGFagvGrkEH5BJ-UNS-D4WNPxv2nXQm8inR58DXMQQLm6ukyR7mb-_cSA2vs_8lFRSw6YQ&usqp=CAc",
     notes: "test outfit 1",
     name: 'Test 1' 
   },
   {
     category: "Night",
-    items: [],
+    items: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTNkTMIglyWAMgHKOnapZ25W6kRzk2tQe3vJAkZaEIa3Hvd2BIcm2ceL1N4ZCFZtgqwEcfbI2QhfOBudzuULw864YCW9K9xxvrXvQ0pvd5JRoDnpu9HPjWk9g&usqp=CAc",
     notes: "test outfit 2",
     name: 'Test 2' 
+  },
+  {
+    category: "Festival",
+    items: "https://krrenee.files.wordpress.com/2020/01/4339d55c-9e51-4db6-a854-f199e3a3e466.jpg",
+    notes: "For EDC. May alter it a bit since it will get cold!",
+    name: 'EDC Day 1' 
   },
 ]
 
