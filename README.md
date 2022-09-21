@@ -24,4 +24,4 @@ Here are some snippits of code ...
 ...coming soon
 
 
-For more info, check out the [Frontend Repo](https://github.com/Mhawkins28/OpenCloset-Client/blob/main/README.md).
+For more info, check out the [Frontend Repo](https://github.com/Mhawkins28/OpenCloset-Front).
