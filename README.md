@@ -5,7 +5,7 @@
   OpenCloset ...
     <br />
     <a href="https://github.com/Mhawkins28/OpenCloset-Server"><strong>Explore the Backend Docs »</strong><br>
-    <a href="https://github.com/Mhawkins28/OpenCloset-Client"><strong>Explore the Frontend Docs »</strong></a>
+    <a href="https://github.com/Mhawkins28/OpenCloset-Front"><strong>Explore the Frontend Docs »</strong></a>
     <br />
     <a href="https://jmmz-ga-p3places-ui.herokuapp.com/">View Live Site</a>
     |
